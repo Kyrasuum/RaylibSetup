@@ -8,7 +8,7 @@ runs:
       with:
         repository: raysan5/raylib
 
-    - name: Leave setup directory
+    - name: Install
       shell: bash
       run: |
         cd raylib/src
