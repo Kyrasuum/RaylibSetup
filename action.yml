@@ -1,4 +1,4 @@
-name: 'Raylib'
+name: 'RaylibSetup'
 description: 'Setup a raylib environment'
 runs:
   using: "composite"
