@@ -1,0 +1,21 @@
+name: 'Raylib'
+description: 'Setup a raylib environment'
+runs:
+  using: "composite"
+  steps:
+    - name: Git Checkout
+      uses: actions/checkout@v2
+      with:
+        repository: raysan5/raylib
+
+    - name: Leave setup directory
+      shell: bash
+      run: |
+        cd raylib/src
+        make PLATFORM=PLATFORM_DESKTOP
+        sudo make install
+        
+    - name: Leave setup directory
+      shell: bash
+      run: |
+        cd ..
