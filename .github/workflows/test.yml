@@ -25,10 +25,5 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@v2
 
-      - name: testing
-        shell: bash
-        run: |
-          ls
-
       - name: Setup
         uses: ./
