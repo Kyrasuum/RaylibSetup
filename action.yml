@@ -7,7 +7,12 @@ runs:
       uses: actions/checkout@v2
       with:
         repository: raysan5/raylib
-
+        
+    - name: test
+      shell: bash
+      run: |
+        ls raylib/
+        
     - name: Install
       shell: bash
       run: |
