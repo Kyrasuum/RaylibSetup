@@ -8,19 +8,14 @@ runs:
       with:
         repository: raysan5/raylib
         
-    - name: test
-      shell: bash
-      run: |
-        ls
-        
     - name: Install
       shell: bash
       run: |
-        cd raylib/src
+        cd src
         make PLATFORM=PLATFORM_DESKTOP
         sudo make install
         
     - name: Leave setup directory
       shell: bash
       run: |
-        cd ..
+        cd ../..
