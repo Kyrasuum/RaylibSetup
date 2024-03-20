@@ -11,7 +11,7 @@ runs:
     - name: test
       shell: bash
       run: |
-        ls raylib/
+        ls
         
     - name: Install
       shell: bash
