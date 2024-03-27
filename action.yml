@@ -36,7 +36,14 @@ runs:
         make PLATFORM=PLATFORM_DESKTOP
         
     - name: Install
+      if: runner.os != 'Windows'
       shell: bash
       run: |
         cd src
         sudo make install
+
+    - name: Install-Windows
+      if: runner.os == 'Windows'
+      run: |
+        cd src
+        make install
