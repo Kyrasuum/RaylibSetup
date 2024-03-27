@@ -44,6 +44,7 @@ runs:
 
     - name: Install-Windows
       if: runner.os == 'Windows'
+      shell: pwsh
       run: |
         cd src
         make install
