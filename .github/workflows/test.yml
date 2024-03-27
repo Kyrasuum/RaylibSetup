@@ -21,4 +21,4 @@ jobs:
 
     steps:
       - name: Test
-        uses: Kyrasuum/RaylibSetup/action.yml@main
+        uses: ./action.yml
