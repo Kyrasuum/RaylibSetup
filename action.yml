@@ -18,6 +18,7 @@ runs:
         echo "::group::brew update" && brew update && echo "::endgroup::"
         echo "::group::brew bundle" && brew bundle && echo "::endgroup::"
         echo "::group::brew config" && brew config && echo "::endgroup::"
+        brew install raylib
 
     - name: Add msbuild to PATH
       if: runner.os == 'Windows'
@@ -28,15 +29,23 @@ runs:
       with:
         repository: raysan5/raylib
         
-    - name: Install
+    - name: Build
       shell: bash
       run: |
         cd src
         make PLATFORM=PLATFORM_DESKTOP
         
-    - name: Leave setup directory
+    - name: Install-Linux
       if: runner.os == 'Linux'
       shell: bash
       run: |
         cd src
         sudo make install
+
+        
+    - name: Install
+      if: runner.os != 'Linux'
+      shell: bash
+      run: |
+        cd src
+        make install
