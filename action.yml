@@ -35,6 +35,8 @@ runs:
         make PLATFORM=PLATFORM_DESKTOP
         
     - name: Leave setup directory
+      if: runner.os == 'Linux'
       shell: bash
       run: |
-        cd ../..
+        cd src
+        sudo make install
