@@ -20,8 +20,5 @@ jobs:
           - windows-latest
 
     steps:
-      - name: Clone repo
-        uses: actions/checkout@v4
-
-      - name: Setup
-        uses: ./
+      - name: Test
+        uses: Kyrasuum/RaylibSetup/action.yml@main
