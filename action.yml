@@ -33,15 +33,8 @@ runs:
       run: |
         cd src
         make PLATFORM=PLATFORM_DESKTOP
-        sudo make install
-        
-    - name: Install-Linux
-      shell: bash
-      if: runner.os == 'Linux'
-      run: |
-        sudo make install
         
     - name: Leave setup directory
       shell: bash
       run: |
-        cd ../..
+        cd ..
