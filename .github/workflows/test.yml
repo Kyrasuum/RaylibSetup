@@ -20,5 +20,13 @@ jobs:
           - windows-latest
 
     steps:
+      # Checkout necessary files to run next action
+      - uses: actions/checkout@v4
+        with:
+          repository: Kyrasuum/RaylibSetup
+          path: test
+          sparse-checkout: |
+            action.yml
+
       - name: Test
-        uses: ./action.yml
+        uses: ./test/action.yml
