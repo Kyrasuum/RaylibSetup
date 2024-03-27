@@ -37,4 +37,4 @@ runs:
     - name: Leave setup directory
       shell: bash
       run: |
-        cd ..
+        cd ../..
