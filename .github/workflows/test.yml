@@ -21,9 +21,7 @@ jobs:
 
     steps:
       # Checkout necessary files to run next action
-      - uses: actions/checkout@v4
-        with:
-          repository: Kyrasuum/RaylibSetup
+      - uses: actions/checkout@v2
 
       - name: Test
-        uses: ./action.yml
+        uses: ./
