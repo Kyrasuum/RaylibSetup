@@ -35,17 +35,8 @@ runs:
         cd src
         make PLATFORM=PLATFORM_DESKTOP
         
-    - name: Install-Linux
-      if: runner.os == 'Linux'
+    - name: Install
       shell: bash
       run: |
         cd src
         sudo make install
-
-        
-    - name: Install
-      if: runner.os != 'Linux'
-      shell: bash
-      run: |
-        cd src
-        make install
