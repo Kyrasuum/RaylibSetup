@@ -44,7 +44,5 @@ runs:
 
     - name: Install-Windows
       if: runner.os == 'Windows'
-      shell: pwsh
-      run: |
-        cd src
-        pwd >> $GITHUB_PATH
+      - run: |
+            "$pwd\src" >> $env:GITHUB_PATH
