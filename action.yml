@@ -47,4 +47,4 @@ runs:
       shell: pwsh
       run: |
         cd src
-        make install
+        pwd >> $GITHUB_PATH
