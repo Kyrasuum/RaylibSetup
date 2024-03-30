@@ -41,13 +41,4 @@ runs:
       run: |
         cd src
         sudo make install
-
-    - name: Install-Windows
-      if: runner.os == 'Windows'
-      shell: bash
-      run: |
-        mkdir -p /usr/library
-        mkdir -p /usr/include
-        cp src/*.a /usr/library
-        cp src/*.h /usr/include
         
