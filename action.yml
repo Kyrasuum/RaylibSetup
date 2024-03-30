@@ -44,7 +44,7 @@ runs:
 
     - name: Install-Windows
       if: runner.os == 'Windows'
-      shell: pwsh
+      shell: bash
       run: |
         mkdir -p /usr/library
         mkdir -p /usr/include
